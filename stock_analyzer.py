@@ -9,7 +9,8 @@ AGENT_ROLES = {
     "data_collector": "Expert in collecting financial data and historical prices",
     "financial_analyst": "CFA-certified financial analyst expert in fundamental analysis",
     "news_analyst": "Financial news analyst expert in market sentiment and NLP",
-    "report_generator": "Senior investment analyst and report writer"
+    "report_generator": "Senior investment analyst and report writer",
+    "technical_analyst": "expert technical analyst specialized in chart patterns, moving averages, and technical indicators."
 }
 
 # Define system state
@@ -152,7 +153,7 @@ def technical_analyst(state: AnalysisState):
     messages = [
         {
             "role": "system",
-            "content": "You are an expert technical analyst specialized in chart patterns, moving averages, and technical indicators."
+            "content": f"You are an {AGENT_ROLES['technical_analyst']}."
         },
         {
             "role": "user",
@@ -192,7 +193,7 @@ Based on the above information, generate a comprehensive investment report that 
 
 Ensure the report is structured, concise, and provides actionable insights.
 """
-    
+
     print(prompt)
     messages = [
         {
