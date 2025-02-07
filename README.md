@@ -1,8 +1,8 @@
-# Stock Analyzer: Multi-Agent Investment Report Generator
+# CapitalPilot: Multi-Agent Investment Report Generator
 
 ## Description
 
-Stock Analyzer is a Python-based project that leverages a multi-agent workflow to generate comprehensive investment reports for publicly traded companies. The tool collects financial data, news articles, and historical price information from Yahoo Finance and then employs several specialized AI agents to perform detailed analyses:
+CapitalPilot is a Python-based project that leverages a multi-agent workflow to generate comprehensive investment reports for publicly traded companies. The tool collects financial data, news articles, and historical price information from Yahoo Finance and then employs several specialized AI agents to perform detailed analyses:
 
 - **Data Collection:** Retrieves historical stock prices, financial statements, and news.
 - **Financial Analysis:** Evaluates a company’s financial health (profitability, liquidity, and solvency) using fundamental analysis.
