@@ -15,7 +15,7 @@ AGENT_ROLES = {
 
 # Define system state
 
-MODEL_NAME = "llama3.2"
+MODEL_NAME = "qwen2"
 
 
 class AnalysisState(TypedDict):
@@ -97,7 +97,7 @@ def news_analyst(state: AnalysisState):
             print(e)
     # Sort news by publication date (descending) and limit to 10 articles
     recent_news = sorted(
-        recent_news, key=lambda x: x["publish_date"], reverse=True)[:25]
+        recent_news, key=lambda x: x["publish_date"], reverse=True)[:10]
 
     messages = [
         {
@@ -181,8 +181,8 @@ Technical Analysis Summary:
 {state['technical_analysis']}
 
 
-Historical Price Data Snapshot (Last 90 records):
-{list(zip(state['historical_data']['Date'], state['historical_data']['Close']))[-90:]}
+Historical Price Data Snapshot (Last 60 records):
+{list(zip(state['historical_data']['Date'], state['historical_data']['Close']))[-60:]}
 
 Based on the above information, generate a comprehensive investment report that includes:
 1. An overview of the company's financial health and performance trends.
@@ -240,6 +240,6 @@ def analyze_stock(symbol: str):
 
 # Example usage
 if __name__ == "__main__":
-    report = analyze_stock("AAPL")
+    report = analyze_stock("UBER")
     print("\nFINAL INVESTMENT REPORT:")
     print(report)
